@@ -11,22 +11,31 @@
     <meta name="keywords"
         content="free internet, internet security, technical specifications, network control, algorithms">
     <meta name="author" content="Lennard Dorst">
+    <meta property="og:title" content="Defining a Free Internet">
+    <meta property="og:description"
+        content="Exploring the concept of a free internet and its technical specifications.">
+    <meta property="og:image" content="./public/tree.jpeg">
+    <meta property="og:type" content="website">
 </head>
 
 <body class="p-4 space-y-6">
     <img src="./public/tree.jpeg" alt="Tree Image" width="120" height="120">
 
-    <h1 id="defining-a-free-internet" class="text-xl font-semibold">Defining a Free Internet</h1>
+    <h1 id="defining-a-free-internet" class="text-2xl font-semibold">Defining a Free Internet</h1>
 
     <p>This project explores what a &quot;free internet&quot; means. There are countries where sharing your thoughts
         will
         get you killed
-        and treated inhumanely (like in China <a href="https://shahit.biz/eng/">source</a>. But there also are people on
+        and treated inhumanely (like in China <a href="https://shahit.biz/eng/" class="text-blue-600">(read more
+            here)</a>. But
+        there also are people on
         the
         internet with
         the pure goal to harm others or spread misinformation. The goal is to find the perfect technical specification
         to
         guarantee security to every person. I will go over some of my approaches to guarantee this.</p>
+
+    <h2 class="text-xl font-semibold">Currently Problems</h2>
     <p>The network should not be controlled by a monopoly. This will cause abuse by the authority. We can see this in
         reality,
         with the ICAAN controlling the domains and the governments being able to take down websites on the clear web.
@@ -36,14 +45,20 @@
         person
         should be
         able to command a takedown of a site.</p>
+
+
+    <h2 class="text-xl font-semibold">Decentralized Content Monitoring</h2>
+
+
     <p>To avoid a monopoly the network needs to be controlled by a good mixture of algorithms (to detect repeated bad
         content).
         Content can be hashed and tagged if it&#39;s flagged, and later on new content can be scanned for matches with
         other
         hashes.
-        This way a malicious piece of content is detected but the content itself is kept private. A network could look
-        like
-        this:</p>
+        This way a malicious piece of content is detected but the content itself is kept private. This is how a flow
+        could look like:
+    </p>
+
     <ol class="list-decimal list-inside space-y-2">
         <li>A user tries to post a new interaction (post, comment) from their profile</li>
         <li>The post is hashed with SHA256 (as base64) and sent through a database to see if it contains dangerous
@@ -60,3 +75,8 @@
             warned or kicked. The kicks are not like bans on most social media platforms and can get appealed.</li>
     </ol>
 </body>
+
+<footer class="bottom-0 py-4 w-full bottom-4">
+    <p>Please check the <a href="https://lennard.bio/" class="text-blue-600">author's site</a> for contact info and
+        legal disclaimers.</p>
+</footer>
