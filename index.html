@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
 </head>
 
-<body class="p-4 space-y-6">
+<body class="p-4 space-y-6 m:w-4/6">
     <img src="./public/tree.jpeg" alt="Tree Image" width="120" height="120">
 
     <h1 id="defining-a-free-internet" class="text-2xl font-semibold">Defining a Free Internet</h1>
@@ -38,42 +38,32 @@
 
     <h2 class="text-xl font-semibold">Currently Problems</h2>
     <p>The network should not be controlled by a monopoly. This will cause abuse by the authority. We can see this in
-        reality,
-        with the ICAAN controlling the domains and the governments being able to take down websites on the clear web.
-        While
-        some
-        of those are justified (scams, c&amp;c for viruses) others are just purely political. In summary no single
-        person
-        should be
-        able to command a takedown of a site.</p>
+        reality, with the ICAAN controlling the domains and the governments being able to take down websites on the
+        clear web. While some of those are justified (scams, c&c for viruses) others are just purely political. In
+        summary, no single person should be able to command a takedown of a site.</p>
 
 
     <h2 class="text-xl font-semibold">Decentralized Content Monitoring</h2>
 
 
-    <p>To avoid a monopoly the network needs to be controlled by a good mixture of algorithms (to detect repeated bad
-        content).
-        Content can be hashed and tagged if it&#39;s flagged, and later on new content can be scanned for matches with
-        other
-        hashes.
-        This way a malicious piece of content is detected but the content itself is kept private. This is how a flow
-        could look like:
+    <p>To avoid a monopoly, the network needs to be controlled by a good mixture of algorithms (to detect repeated bad
+        content). Content can be hashed and tagged if it's flagged, and later on new content can be scanned for matches
+        with other hashes. This way a malicious piece of content is detected but the content itself is kept private.
+        This is how a flow could look like:
     </p>
 
     <ol class="list-decimal list-inside space-y-2">
-        <li>A user tries to post a new interaction (post, comment) from their profile</li>
+        <li>A user tries to post a new interaction (post, comment) from their profile. </li>
         <li>The post is hashed with SHA256 (as base64) and sent through a database to see if it contains dangerous
-            material
-            (i.e.
-            an image of an execution). If there is a match it gets flagged and blocked. The post data itself is not
-            stored
-            and
-            nobody can trace back which person tried to post it.</li>
-        <li>Using vector analysis each word is embedded and checked against a vector database. It can get flagged as
-            inappropriate or offending.</li>
-        <li>Users with a low-tolerance setting will not see flagged posts and people with repetitive flagged posts will
-            get
-            warned or kicked. The kicks are not like bans on most social media platforms and can get appealed.</li>
+            material (i.e. an image of an execution). If there is a match, it gets flagged and blocked. The post data
+            itself is not stored and nobody can trace back which person tried to post it.
+        </li>
+        <li>Using vector analysis, each word is embedded and checked against a vector database. It can get flagged as
+            inappropriate or offending.
+        </li>
+        <li>Users with a low-tolerance setting will not see flagged posts, and people with repetitive flagged posts will
+            get warned or kicked. The kicks are not like bans on most social media platforms and can get appealed.
+        </li>
     </ol>
 
     <h2 class="text-xl font-semibold">Implementation of this Network</h2>
@@ -82,23 +72,26 @@
         components in the internet we need to define and recreate:</p>
 
     <ol class="list-decimal list-inside space-y-2">
-        <li>Database to hash and store images, videos and other files that are violent anti-TOS files.</li>
-        <li>The vector store and function to validate the text content in multiple dimensions.</li>
-        <li>A content queue to keep track of upcoming interactions to approve (or decline) and flag them.</li>
+        <li>Database to hash and store images, videos and other files that are violent anti-TOS files. </li>
+        <li>The vector store and function to validate the text content in multiple dimensions. </li>
+        <li>A content queue to keep track of upcoming interactions to approve (or decline) and flag them.
+        </li>
         <li>Blockchain to keep track of all existing and improved posts. This integrates in #2. Individuals who
-            contribute are rewarded for verifying and storing the content. </li>
-        <li>A list of controllers to keep track of all nodes of #3. Blockchains loose their value if a large portion of
-            the nodes are controlled by a single entity, which would cause the network to break as it then would be
-            controlled by a monopoly. See the equivalent in the TOR network <a
-                href="https://www.theguardian.com/world/2013/oct/04/tor-attacks-nsa-users-online-anonymity"
-                class="text-blue-600" target="_blank">here</a>.</li>
+            contribute are rewarded for verifying and storing the content.
+        </li>
+        <li>A list of controllers to keep track of all nodes of #3. Blockchains lose their value if a large portion of
+            the nodes are controlled by a single entity, which would cause the network to break, as it then would be
+            controlled by a monopoly. See the equivalent in the TOR network
+            <a href="https://www.theguardian.com/world/2013/oct/04/tor-attacks-nsa-users-online-anonymity"
+                class="text-blue-600" target="_blank">here</a>.
+        </li>
     </ol>
 
     <h2 class="text-xl font-semibold">Funding + Bounty</h2>
 
-    <p>I am more than happy to fund such projects with up to 10,000$ in checks. The only requirement is an active
-        working demo (+ good if you have users already). It also needs to be open-source but monetized. Send me an <a
-            href="mailto:lennard@beachcode.de" class="text-blue-600">email</a> for more.</p>
+    <p>I am more than happy to fund such projects with up to $10,000 in checks. The only requirement is an active
+        working demo (+ good if you have users already). It also needs to be open-source but monetized. <a
+            href="mailto:lennard@beachcode.de" class="text-blue-600">Email</a> me for more.</p>
 </body>
 
 <footer class="bottom-0 py-4 w-full bottom-4">
