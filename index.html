@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defining a Free Internet</title>
+    script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <p>![[public/tree.webp]]</p>
+    <h1 id="defining-a-free-internet">Defining a Free Internet</h1>
+    <p>This project explores what a &quot;free internet&quot; means. There are countries where sharing your thoughts
+        will
+        get you killed
+        and treated inhumanely (like in China <a href="https://shahit.biz/eng/">source</a>. But there also are people on
+        the
+        internet with
+        the pure goal to harm others or spread misinformation. The goal is to find the perfect technical specification
+        to
+        guarantee security to every person. I will go over some of my approaches to guarantee this.</p>
+    <p>The network should not be controlled by a monopoly. This will cause abuse by the authority. We can see this in
+        reality,
+        with the ICAAN controlling the domains and the governments being able to take down websites on the clear web.
+        While
+        some
+        of those are justified (scams, c&amp;c for viruses) others are just purely political. In summary no single
+        person
+        should be
+        able to command a takedown of a site.</p>
+    <p>To avoid a monopoly the network needs to be controlled by a good mixture of algorithms (to detect repeated bad
+        content).
+        Content can be hashed and tagged if it&#39;s flagged, and later on new content can be scanned for matches with
+        other
+        hashes.
+        This way a malicious piece of content is detected but the content itself is kept private. A network could look
+        like
+        this:</p>
+    <ol>
+        <li>A user tries to post a new interaction (post, comment) from their profile</li>
+        <li>The post is hashed with SHA256 (as base64) and sent through a database to see if it contains dangerous
+            material
+            (i.e.
+            an image of an execution). If there is a match it gets flagged and blocked. The post data itself is not
+            stored
+            and
+            nobody can trace back which person tried to post it.</li>
+        <li>Using vector analysis each word is embedded and checked against a vector database. It can get flagged as
+            inappropriate or offending.</li>
+        <li>Users with a low-tolerance setting will not see flagged posts and people with repetitive flagged posts will
+            get
+            warned or kicked. The kicks are not like bans on most social media platforms and can get appealed.</li>
+    </ol>
+</body>
+
+</html>
